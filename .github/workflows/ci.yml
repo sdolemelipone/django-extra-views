@@ -1,9 +1,6 @@
 name: CI
 on: [push, pull_request]
 jobs:
-  #black
-  #flake8
-  #isort
   tests:
     runs-on: ubuntu-latest
     strategy:
@@ -21,6 +18,11 @@ jobs:
           python -m pip install tox tox-gh-actions
       - name: Run tests with tox
         run: tox
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          fail_ci_if_error: true
+        if: ${{ matrix.python-version }} == 3.8
 
 
 
