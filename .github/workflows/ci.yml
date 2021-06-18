@@ -18,11 +18,11 @@ jobs:
           python -m pip install tox tox-gh-actions
       - name: Run tests with tox
         run: tox
-      - name: Upload coverage to Codecov
+      - name: Upload coverage.xml to Codecov
+        if: ${{ matrix.python-version == '3.9' }}
         uses: codecov/codecov-action@v1
         with:
           fail_ci_if_error: true
-        if: ${{ matrix.python-version }} == 3.8
 
 
 
