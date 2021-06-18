@@ -3,6 +3,8 @@
 .pydevproject
 .coverage
 .DS_Store
+venv/
+.venv/
 django_extra_views.egg-info/
 htmlcov/
 build/
