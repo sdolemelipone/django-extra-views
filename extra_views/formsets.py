@@ -18,7 +18,7 @@ class BaseFormSetFactory(object):
 
     Calling `construct_formset` calls all other methods.
     """
-
+    touch = None
     initial = []
     form_class = None
     formset_class = None
