@@ -18,8 +18,8 @@ Full documentation is available at `read the docs`_.
     :target: https://travis-ci.org/AndrewIngram/django-extra-views
     :alt: Build Status
 
-.. |codecov| image:: https://codecov.io/github/AndrewIngram/django-extra-views/coverage.svg?branch=master
-    :target: https://codecov.io/github/AndrewIngram/django-extra-views?branch=master
+.. |codecov| image:: https://codecov.io/gh/sdolemelipone/django-extra-views/branch/gh-actions/graph/badge.svg?token=7ZUbyH4eq8
+    :target: https://codecov.io/gh/sdolemelipone/django-extra-views
     :alt: Coverage Status
 
 .. |docs-status| image:: https://readthedocs.org/projects/django-extra-views/badge/?version=latest

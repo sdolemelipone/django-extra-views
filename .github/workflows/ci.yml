@@ -18,6 +18,13 @@ jobs:
           python -m pip install tox tox-gh-actions
       - name: Run tests with tox
         run: tox
+      - name: Upload coverage.xml
+        if: ${{ matrix.python-version == '3.9' }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: django-extra-views-coverage
+          path: coverage.xml
+          if-no-files-found: error
       - name: Upload coverage.xml to Codecov
         if: ${{ matrix.python-version == '3.9' }}
         uses: codecov/codecov-action@v1
