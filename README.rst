@@ -187,3 +187,80 @@ Then within ``order_and_items.html``, render the formset like this:
     </form>
 
 .. quick-examples-end
+
+
+Contributing
+--------------
+
+The project welcomes PR's to fix bugs and extend functionality.
+
+Fork the repository, check out locally and create a local virtual environment.
+
+Run the tests first to ensure that they pass.
+
+Please add your details to the ``AUTHORS.rst`` file along with your changes.
+
+Running tests
+^^^^^^^^^^^^^
+
+To run tests install tox using
+
+.. code-block::
+
+    pip install tox
+
+..
+
+Then run tests against all support Python versions:
+
+.. code-block::
+
+    tox
+
+..
+
+To run only a subset of the tests, e.g. only Python 3.10, run:
+
+.. code-block::
+
+    tox -e py310
+
+..
+
+See the ``tox.ini`` file for details of specific test suite names.
+
+Tests will fail for any versions of Python which are not installed on the local machine.
+
+Previewing documentation
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Documentation is generated when running the full tox test suite. The output can
+be previewed in ``docs/_build``.
+
+To build the documentation separately, run
+
+.. code-block::
+
+    tox -e docs
+
+..
+
+
+Linting & pre-commit
+^^^^^^^^^^^^^^^^^^^^
+
+The test suite will fail if any of the ``black``, ``isort`` or ``flake8``
+formatter/linter tasks find errors.
+
+Optionally, you can install ``pre-commit`` to run them automatically before committing.
+
+In your local environment, run the commands below:
+
+.. code-block::
+
+    pip install pre-commit
+    pre-commit install
+
+..
+
+Your code will now automatically be re-formatted before the commit is made.
